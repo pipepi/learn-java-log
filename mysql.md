@@ -50,9 +50,19 @@ log-err=/var/lib/mysql/logerr
     "ARCHIVE";"YES";"Archive storage engine";"NO";"NO";"NO"
     "FEDERATED";"NO";"Federated MySQL storage engine";NULL;NULL;NULL
     "InnoDB";"DEFAULT";"Supports transactions, row-level locking, and foreign keys";"YES";"YES";"YES"
+    ----------------------------------------------------------------------------------------------------
+    show variables like '%storage_engine%';
 
     ```
     - InnoDB
     - Myisam
+    - InnoDB vs Myisam
+      - 主/外键（inno支持主键和外键，myisam不支持）
+      - 事务（inno支持事务，myisam不支持）
+      - 行锁（inno支持行级锁，myisam只支持表锁）
+      - 缓存（inno会缓存数据，myisam只缓存地址引用）
+      - 表空间（inno 大，myisam 小）
+      - 关注点（inno 事务，myisam 性能）
+      
 - level 4 存储
   - FileSystem & Files & Logs
