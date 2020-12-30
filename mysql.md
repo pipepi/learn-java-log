@@ -26,3 +26,11 @@ log-err=/var/lib/mysql/logerr
 - myd 存放数据
 - myi 存放索引
 # 结构
+- connection pool
+- managementService & Utilities
+- caches & buffers
+- sql interface & Parser & Optimizer
+- Pluggable Stroage Engines
+  - InnoDB
+  - Myisam
+- FileSystem & Files & Logs
