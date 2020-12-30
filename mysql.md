@@ -69,3 +69,10 @@ log-err=/var/lib/mysql/logerr
       
 - level 4 存储
   - FileSystem & Files & Logs
+# 索引优化分析
+- sql慢
+  - 执行时间长活等待时间长
+    - 查询语句写的烂
+    - 索引失效（单值，复合）
+    - 关联太多join
+    - 服务器调优和各个参数设置（缓存，线程数等）
