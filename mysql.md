@@ -63,6 +63,9 @@ log-err=/var/lib/mysql/logerr
       - 缓存（inno会缓存数据，myisam只缓存地址引用）
       - 表空间（inno 大，myisam 小）
       - 关注点（inno 事务，myisam 性能）
+    - ali使用 
+      - 早期 percona **xtradb**存储引擎
+      - 后期 AliSql+AliRedis
       
 - level 4 存储
   - FileSystem & Files & Logs
