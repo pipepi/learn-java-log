@@ -71,7 +71,7 @@ log-err=/var/lib/mysql/logerr
   - FileSystem & Files & Logs
 # 索引优化分析
 - sql慢
-  - 执行时间长活等待时间长
+  - 执行时间长或等待时间长
     - 查询语句写的烂
     - 索引失效（单值，复合）
     - 关联太多join
