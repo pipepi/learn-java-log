@@ -29,11 +29,15 @@ log-err=/var/lib/mysql/logerr
 - myd 存放数据
 - myi 存放索引
 # 结构
-- connection pool
-- managementService & Utilities
-- caches & buffers
-- sql interface & Parser & Optimizer
-- Pluggable Stroage Engines
-  - InnoDB
-  - Myisam
-- FileSystem & Files & Logs
+- level 1 连接层
+  - connection pool
+- level 2 服务层
+  - managementService & Utilities
+  - caches & buffers
+  - sql interface & Parser & Optimizer
+- level 3 引擎
+  - Pluggable Stroage Engines
+    - InnoDB
+    - Myisam
+- level 4 存储
+  - FileSystem & Files & Logs
