@@ -1,3 +1,18 @@
+# 批量插入
+- 方案1 【7.2秒】
+```shell
+for(var i=0 ;i<=2000;i++){
+db.numbers.insert({num:i});
+}
+```
+- 方案2 【0.4秒】
+```shell
+var arr = [];
+for(var i=1;i<20000;i++){
+  arr.push({num:i});
+}
+db.numbers.insert(arr);
+```
 # 内嵌文档
 - 文档属性的值为文档叫内嵌文档
 - 按内嵌文档值查询时，key可以用.级联选择，但必须加引号，代表表达式。
