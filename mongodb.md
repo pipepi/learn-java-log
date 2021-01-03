@@ -3,13 +3,17 @@
 - 按内嵌文档值查询时，key可以用.级联选择，但必须加引号，代表表达式。
   - db.users.find({'hobby.movies':"hello"})
 # 修改修改器/操作符
-- $set
-- $unset
-- $min
-- $max
-- $inc
-- $sub
-- $mul
+- obj类
+  - $set
+  - $unset
+  - $min
+  - $max
+  - $inc
+  - $sub
+  - $mul
+- array类
+  - $push      直接添加，不考虑重复
+  - $addToSet  如果重复/已有，就不添加
 # 常用命令
 - 基本命令，查询切换数据库或集合
 ```shell
