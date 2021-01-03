@@ -1,3 +1,8 @@
+
+# 投影 find({},{attr1:1【查询】,attr2:0【排除】})
+db.emp.find({},{attr1:1,attr2:0})
+# 排序 sor({attr1:1【升序】,attr2:-1【降序】}) 
+db.emp.find({}).sor({sal:1})
 # 批量插入
 - 方案1 【7.2秒】
 ```shell
