@@ -1,3 +1,8 @@
+# mongoose
+- 操作约束/过滤/转换 schema
+- model  集合
+- document 文档
+
 
 # 投影 find({},{attr1:1【查询】,attr2:0【排除】})
 db.emp.find({},{attr1:1,attr2:0})
