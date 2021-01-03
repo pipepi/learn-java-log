@@ -17,6 +17,16 @@ db.numbers.insert(arr);
 - 文档属性的值为文档叫内嵌文档
 - 按内嵌文档值查询时，key可以用.级联选择，但必须加引号，代表表达式。
   - db.users.find({'hobby.movies':"hello"})
+# 查询操作符
+- 比较
+  - $gt
+  - $gte
+  - $lt
+  - $lte
+  - $eq
+  - $ne
+  - {$gt:40,$lt:50}
+- 范围
 # 修改修改器/操作符
 - obj类
   - $set
@@ -48,6 +58,8 @@ ObjectId() # 查询唯一id
 db.<collection name>.find({key:value}) # 查询集合中符合查询条件的所有文档 ，返回数组[]
 db.xxx.findOne({k:v}) # 查询第一个，返回对象{}
 db.xxx.find({}).count() or db.xxx.find({}).length() # 查询文档数
+db.xxx.find({}).limit(10) # 查询前10条 
+db.xxx.find({}).skip(10).limit(10) # 分页查询10条后的10条数据 ，skip,limit顺序无关，mongo自动调整
 
 db.xxx.update({}【查询条件】,{}【新对象】,{upsert:<bool>,multi:<bool>,writeConcern:<document>,collation:<document>}【修改选项】) # 按查询条件修改为新对象 。默认使用新对象替换旧对象【完全覆盖，可能丢失属性】。默认只修改第一个
 db.xxx.update({}【查询条件】,{$set:{}}【新对象】) # 修改操作符【$set【修改或添加属性】: $unset【删除属性】:】，按属性修改
