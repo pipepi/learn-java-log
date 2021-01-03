@@ -1,3 +1,8 @@
+# 日志文件
+- error log 
+- query log
+- low query log
+- bin log
 # 配置
 ## 配置 my.cnf
 ```shell
