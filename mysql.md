@@ -3,6 +3,9 @@
 - query log
 - low query log
 - bin log
+- 隐藏日志
+  - 事务日志redo-undu 【只属于innodb，对应会有Mysql物理文件】
+  - 重放日志relay log 【只在主从复制中的从节点，用于数据复制】
 # 配置
 ## 配置 my.cnf
 ```shell
