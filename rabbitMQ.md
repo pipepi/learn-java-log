@@ -23,7 +23,7 @@ try{
 - autoDelete: 自动删除【结合exclusive，两者都设置为true来创建临时队列】
 - arguments: 参数【例如，存活时间】
 # channel.basicPublish(String exchange,String routingKey,BasicProperties props,byte[] body)
-- exchange: 交互接，不指定则使用默认交换机
+- exchange: 交互接，不指定["",不能为null，否则NPE]则使用默认交换机
 - routingKey: 路由key，交换机将消息根据此路由key来转发到对应队列
 - props： 消息属性
 - body： 消息内容
