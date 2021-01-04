@@ -1,3 +1,28 @@
+# spring boot 使用rabbitMQ
+- jar依赖 spring-boot-starter-amqp
+- yaml配置 
+```yaml
+spring:
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    username: guest
+    password: guest
+    virtualHost: /
+```
+- java code
+  - @Configuration @bean
+    - exchange
+    - queue
+    - binder
+      - routeKey
+   - 生产
+    - @Compomentr
+    - @Autowired RabbitTemplate rabbitTemplate
+    - rabbitTemplate.converAndSend(ex,routKey,msgObj);
+   - 消费
+    - @Component
+    - @RabbitListener(queues={"queue_name"}) public void xxx(String msg,Message message,Channel channel){// do xxx logic code}
 # 工作模式
 - RPC 【借助消息队列实现异步通信】【客户端【生产者，消费者】，服务端【消费者，生产者】】
   - 结构
