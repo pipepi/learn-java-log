@@ -1,3 +1,53 @@
+# 常用流
+- 节点流
+  - 字节流 接口 InputStream OutputStream
+    - 输入流
+      - FileInputStream
+    - 输出流
+      - FileOutputStream
+   - 字符流 
+- 过滤流
+  - 字节流
+    - 输入流
+      - BufferedInputStream 【自带缓冲，减少io操作】
+      - ObjectInputStream 【反系列化，带缓冲，方便java对象】
+        - 类及内部属性实现Serializable接口
+        - serialVersionID 版本id保证反序列号回来是同一个类的版本【不同版本反序列化会抛出异常】】写入的使用场景
+        - transient 瞬间的，修饰的属性，静态属性也不系列化
+        - 反系列化多个对象
+          - 多次执行反序列化【readObject】
+          - 反序列多个对象组成的List
+    - 输出流
+      - BufferedOutputStream
+      - ObjectOutputStream
+  - 字符流 抽象类 Reader Writer 【不能处理二进制文件，因为编码只用部分编号，没有对应字符的编号统一对应到乱码，丢失了原有的二进制值】
+    - 字符编码
+      - ISO-8859-1 一个字节长度，ASCII+西欧+希腊+泰+阿拉伯+希伯来
+      - UTF-8 Unicode编码的可变长度【1,2,3字节】字符编码
+      - GB2312 简体中文【1.2字节】
+      - GBK 简体中文扩充【1.2字节】
+      - BIG5 台湾，繁体中文【1，2字节】
+      - 乱码
+        - 编码和解码字节流的字符编码不一致
+      - char
+        - 内码
+          - 内存中 用utf16编码，占2字节，少数字符要用2个char表示
+        - 外码
+          - class文件中， 用utf8表示，占1-6个字节
+    - 输入流
+      - FileReader 
+        - 默认缓冲区大小
+        - 默认字符编码
+      - BufferedReader
+        - 带缓冲区，减少io次数
+        - 支持输入换行符 readLine() newLine()
+        - 按行读取
+      - InputStreamReader 输入字节流转字符流 【桥转换流】
+    - 输出流
+      - FileWriter 编码
+      - BufferedWriter 缓冲
+      - PrintWriter 打印流
+      - outputStreamWriter 输出字符流转字节流
 # 分类
 - 方向/相对内存/主存
   - 输入
