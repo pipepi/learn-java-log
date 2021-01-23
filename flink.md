@@ -1,4 +1,8 @@
-# flink
+# Flink
+## 竞品/前身
+- Storm
+- Spark
+- DataFlow
 ## 应用场景
 - data pipeline 管道
   - 传统 periodic ETL(Extract-transform-laod)
