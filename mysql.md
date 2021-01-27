@@ -3,6 +3,10 @@
 ```sql
 select TABLE_NAME,TABLE_COMMENT from information_schema.tables where TABLE_TYPE = 'BASE TABLE' and table_schema = 'digital_marketing_platform';
 ```
+- 查询表字段说明
+```sql
+select TABLE_NAME,COLUMN_NAME,DATA_TYPE,COLUMN_COMMENT from information_schema.COLUMNS where   table_schema = 'digital_marketing_platform';
+```
 # ？已分表数据分页查询
 - 允许精度误差
   - 按查询条件去不同库中获取对应百分比的量，进行汇总
